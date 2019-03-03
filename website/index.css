@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+@import url('https://fonts.googleapis.com/css?family=Srisakdi'); /** Cursive-ish */
+@import url('https://fonts.googleapis.com/css?family=Poiret+One'); /** Thin font */
+
+body {
+    margin: 0;
+    overflow-wrap: break-word;
+    background: #FDFDFF;
+    color: #393D3F;
+    font-family: 'Poiret One', cursive;
+}
+
+.banner__img {
+    object-fit: cover;
+    width: 100vw;
+    max-height: 40vh;
+    min-height: 300px;
+}
+
+.jumbotron {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    margin: 16px auto 32px auto;
+    padding: 16px 0 16px 0;
+    width: 30vw;
+    min-width: 200px;
+    text-align: center;
+    background: rgba(132,153,144, .8); /** lightstalegray */
+    color: #FDFDFF;
+}
+
+.jumbotron a {
+    color: #FDFDFF;
+}
+
+.jumbotron h5 {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    margin-top: 16px;
+    border-top: 1px solid rgb(132,153,144);
+    text-align: center;
+}
+
+footer a {
+    color: #393D3F;
+}
+
+.legal {
+    color: rgb(132,153,144);
+}
+
+main {
+    margin: 0 auto;
+    font-weight: 700;
+    width: 60vw;
+    max-width: 1080px;
+    min-width: 200px;
+}
