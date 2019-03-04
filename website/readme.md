@@ -8,6 +8,9 @@ A static front for Skookumchuck Botanicals.
 Hosting and deployment is accomplished via Netlify.
 Serverless functions are in the lambda directory
 
+![Screenshot](screenshot.png "Screenshot of the site")
+
+
 
 Version 1.0 -- Online Business Card
 
