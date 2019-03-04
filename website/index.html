@@ -35,6 +35,49 @@
             <p class="legal">&copy; Skookumchuck Botanicals 2019</p>
         </footer>
     </main>
+    <script>
+        const favicons = document.querySelectorAll("link[rel*='icon']");
+
+        /** Makes sense for favicons to be global in an HTML doc, really */
+        function setFaviconsHref (href) {
+            favicons.forEach(fav => {
+                fav.href = href;
+            })
+        }
+
+        /** https://koddsson.com/posts/emoji-favicon/ */
+        function setFavicontoEmoji (emoji) {
+            const canvas = document.createElement('canvas');
+            canvas.height = 64;
+            canvas.width = 64;
+
+            const ctx = canvas.getContext('2d');
+            ctx.font = '55px serif';
+            ctx.fillText(emoji, -8, 60);
+
+            setFaviconsHref(canvas.toDataURL());
+        }
+
+        var emojiAlertInterval = null;
+        window.onblur = () => {
+            var emojiIntervalToggle = false;
+            emojiAlertInterval = setInterval(() => {
+                if (emojiIntervalToggle) {
+                    setFavicontoEmoji('🌱');
+                } else {
+                    setFavicontoEmoji('🥀');
+                }
+                emojiIntervalToggle = !emojiIntervalToggle;
+            }, 1000)
+        }
+
+        window.onfocus = () => {
+            if (emojiAlertInterval) {
+                clearInterval(emojiAlertInterval);
+            }
+            setFaviconsHref('favicon.ico');
+        }
+    </script>
 </body>
 
 </html>
